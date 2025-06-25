@@ -18,6 +18,14 @@ const fetchProfile = async () => {
   }
 }
 
+async function handleSubmit() {
+  if(token) {
+    localStorage.removeItem('token');
+    token.value = false;
+    router.push('/')
+  }
+}
+
 onMounted(() => {
   fetchProfile()
 })

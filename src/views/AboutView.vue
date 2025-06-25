@@ -9,7 +9,7 @@ const router = useRouter();
 
 async function getUser() {
   try {
-    const response = await api.get('user')
+    const response = await api.get('profile')
   } catch (err) {
     console.error('error: ' + err.message)
   }
